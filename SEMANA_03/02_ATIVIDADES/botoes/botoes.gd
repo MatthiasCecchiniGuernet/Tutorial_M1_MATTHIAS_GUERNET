@@ -9,34 +9,38 @@ var pressed = false
 var resolucao_y = true
 
 func _process(delta):
-	if Input.is_action_pressed("ui_right") and $engordot.position.x < 1024 - 32:
+	if Input.is_action_pressed("ui_right") and $engordot.position.x < 1024 - 32 and pressed == false:
 		$engordot.move_local_x(velo)
-	elif Input.is_action_just_released ("ui_right") and pressed == true:
+		left = false
+	elif Input.is_action_pressed ("ui_right") and pressed == true:
 		right = true
 	if right and $engordot.position.x < 1024 - 32:
 		$engordot.move_local_x(velo)
 		left = false
 
-	if Input.is_action_pressed("ui_left") and $engordot.position.x > 32:
+	if Input.is_action_pressed("ui_left") and $engordot.position.x > 32 and pressed == false:
 		$engordot.move_local_x(-velo)
-	elif Input.is_action_just_released ("ui_left") and pressed == true:
+		right = false
+	elif Input.is_action_pressed ("ui_left") and pressed == true:
 		left = true
 	if left and $engordot.position.x > 32:
 		$engordot.move_local_x(-velo)
 		right = false
 
-	if Input.is_action_pressed("ui_up") and $engordot.position.y > 32:
+	if Input.is_action_pressed("ui_up") and $engordot.position.y > 32 and pressed == false:
 		$engordot.move_local_y(-velo)
-	elif Input.is_action_just_released ("ui_up") and pressed == true:
+		down = false
+	elif Input.is_action_pressed ("ui_up") and pressed == true:
 		up = true
 	if up and $engordot.position.y > 32:
 		$engordot.move_local_y(-velo)
 		down = false
 
 	resolucao_y = $engordot.position.y < 600 - 32
-	if Input.is_action_pressed("ui_down") and resolucao_y:
+	if Input.is_action_pressed("ui_down") and resolucao_y and pressed == false:
 		$engordot.move_local_y(velo)
-	elif Input.is_action_just_released ("ui_down") and pressed == true:
+		up = false
+	elif Input.is_action_pressed ("ui_down") and pressed == true:
 		down = true
 	if down and resolucao_y:
 		$engordot.move_local_y(velo)
