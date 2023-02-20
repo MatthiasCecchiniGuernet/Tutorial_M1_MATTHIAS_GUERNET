@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://tela_inicial.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 215.0
+margin_top = 152.0
+margin_right = 371.0
+margin_bottom = 208.0
+text = "Lista Vazia"
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 641.0
+margin_top = 149.0
+margin_right = 799.0
+margin_bottom = 204.0
+text = "lista preenchida"
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 212.0
+margin_top = 333.0
+margin_right = 366.0
+margin_bottom = 390.0
+text = "função"
+
+[node name="Button4" type="Button" parent="."]
+margin_left = 644.0
+margin_top = 339.0
+margin_right = 799.0
+margin_bottom = 394.0
+text = "função valor"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_Button4_pressed"]

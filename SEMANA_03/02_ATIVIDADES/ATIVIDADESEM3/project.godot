@@ -10,9 +10,13 @@ config_version=4
 
 [application]
 
-config/name="botoes"
-run/main_scene="res://Node2D.tscn"
+config/name="Atividade Semana 3"
+run/main_scene="res://lista_vazia.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+TelaInicial="*res://tela_inicial.gd"
 
 [gui]
 
