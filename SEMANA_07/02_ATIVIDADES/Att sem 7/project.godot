@@ -10,14 +10,9 @@ config_version=4
 
 [application]
 
-config/name="Atividade Semana 7"
-run/main_scene="res://Node2D.tscn"
+config/name="Att Sem 7"
+run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
-
-[autoload]
-
-Perdeu="*res://Perdeu.tscn"
-Node2d="*res://Node2D.tscn"
 
 [gui]
 
